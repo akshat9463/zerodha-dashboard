@@ -15,7 +15,7 @@ const Logout = () => {
         navigate("/login");
       }
       const { data } = await axios.post(
-        "http://localhost:8080",
+        "https://zerodha-backend-obxc.onrender.com",
         {},
         { withCredentials: true }
       );
