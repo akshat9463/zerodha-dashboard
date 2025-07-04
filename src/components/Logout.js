@@ -35,7 +35,7 @@ const Logout = () => {
   }, [cookies, navigate, removeCookie]);
   const Logout = () => {
     removeCookie("token");
-    window.location.href = "http://localhost:3000/signup";
+    window.location.href = "https://zerodha-clientside.onrender.com";
   };
   return (
     <>
