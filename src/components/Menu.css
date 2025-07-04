@@ -1,0 +1,10 @@
+.menu {
+  margin: 0;
+  font-weight: 500;
+  color: #333;
+}
+
+.menu.selected {
+  font-weight: bold;
+  color: #0d6efd;
+}
