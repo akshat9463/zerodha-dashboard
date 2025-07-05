@@ -15,7 +15,7 @@ const Logout = () => {
         navigate("/login");
       }
       const { data } = await axios.post(
-        "https://zerodha-backend-obxc.onrender.com/auth",
+        "http://localhost:8080",
         {},
         { withCredentials: true }
       );
@@ -35,7 +35,8 @@ const Logout = () => {
   }, [cookies, navigate, removeCookie]);
   const Logout = () => {
     removeCookie("token");
-    window.location.href = "https://zerodha-clientside.onrender.com";
+    window.location.href = "http://localhost:3000";
+    navigate('/signup')
   };
   return (
     <>
