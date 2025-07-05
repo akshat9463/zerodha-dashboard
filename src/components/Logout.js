@@ -12,7 +12,8 @@ const Logout = () => {
   useEffect(() => {
     const verifyCookie = async () => {
       if (!cookies.token) {
-        navigate("/login");
+        // navigate("/login");
+        window.location.href = "https://zerodha-clientside.onrender.com";
       }
       const { data } = await axios.post(
         "https://zerodha-dashboard-uu4u.onrender.com",
@@ -29,7 +30,10 @@ const Logout = () => {
             pauseOnHover: true,
             draggable: true,
           })
-        : (removeCookie("token"), navigate("/login"));
+        : (removeCookie("token"),
+        //  navigate("/login")
+        window.location.href = "https://zerodha-clientside.onrender.com"
+        );
     };
     verifyCookie();
   }, [cookies, navigate, removeCookie]);
