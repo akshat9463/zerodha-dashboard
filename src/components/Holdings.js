@@ -44,10 +44,10 @@ const Holdings = () => {
 //   ],
 // };
 
-   return (
+  return (
     <div className="container my-4">
       {/* Title */}
-      <h3 className="mb-4">Holdings ({allHoldings.length})</h3>
+      <h4 className="mb-4">Holdings ({allHoldings.length})</h4>
 
       {/* Responsive Table */}
       <div className="table-responsive mb-4">
@@ -90,30 +90,29 @@ const Holdings = () => {
         </table>
       </div>
 
-      {/* Summary Row */}
+      {/* Summary Section */}
       <div className="row text-center mb-4">
-        <div className="col-md-4 mb-3">
-          <h5>
-            ₹29,875.<span>55</span>
-          </h5>
+        <div className="col-12 col-md-4 mb-3">
+          <h5>₹29,875.<span>55</span></h5>
           <p className="text-muted mb-0">Total investment</p>
         </div>
-        <div className="col-md-4 mb-3">
-          <h5>
-            ₹31,428.<span>95</span>
-          </h5>
+        <div className="col-12 col-md-4 mb-3">
+          <h5>₹31,428.<span>95</span></h5>
           <p className="text-muted mb-0">Current value</p>
         </div>
-        <div className="col-md-4 mb-3">
+        <div className="col-12 col-md-4 mb-3">
           <h5 className="text-success">₹1,553.40 (+5.20%)</h5>
           <p className="text-muted mb-0">P&amp;L</p>
         </div>
       </div>
 
-      {/* Graph Component */}
-      <VerticalGraph data={data} />
+      {/* Graph Section */}
+      <div className="w-100">
+        <VerticalGraph data={data} />
+      </div>
     </div>
   );
+
 };
 
 export default Holdings;
